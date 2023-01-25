@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+/* ### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%) */
+:root {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /*Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --dsaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--pale-blue);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card {
+  height: 45em;
+  width: 30em;
+
+  border-radius: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0em 2em 3em 1em,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px 1px;
+}
+.card-container {
+  padding: 3em;
+}
+.card-image {
+  height: 32%;
+}
+.card-image img {
+  border: none;
+  border-radius: 1em 1em 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-body {
+  height: 68%;
+  background-color: white;
+  border-radius: 0 0 1em 1em;
+}
+.summary-title {
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 0.6em;
+}
+.summary-content {
+  font-size: 1.1em;
+  font-weight: 100;
+  text-align: center;
+  padding-bottom: 1em;
+  line-height: 1.7;
+  color: var(--dsaturated-blue);
+}
+.cost-body {
+  padding: 1.5em;
+  background-color: var(--very-pale-blue);
+  border-radius: 0.6em;
+  display: flex;
+  align-items: center;
+}
+.icon-music {
+  width: 2.5em;
+}
+.plan-type {
+  padding-left: 1em;
+}
+.cost-body h2 {
+  font-size: 1em;
+  font-weight: 900;
+}
+.cost-body p {
+  font-size: 1em;
+  color: var(--dsaturated-blue);
+}
+.btn-change {
+  margin-left: auto;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+.btn-change:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.btn-proceed {
+  display: block;
+  width: 100%;
+  height: 3em;
+  margin: 2em 0;
+  border: none;
+  border-radius: 0.6em;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  background-color: var(--bright-blue);
+  box-shadow: var(--pale-blue) 0px 1em 1em 0.5em;
+}
+.btn-proceed:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.btn-cancel {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--dsaturated-blue);
+  font-size: 1em;
+  font-weight: 900;
+}
+.btn-cancel:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  color: black;
+}
+@media screen and (min-width: 380px) and (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  .card {
+    height: 45em;
+    width: 26em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 12px;
+  }
+  .card {
+    height: 45em;
+    width: 26em;
+  }
+}
